@@ -1,17 +1,33 @@
-/* Изменение цвета кнопки на синий - максимально специфичные селекторы */
-#button649715,
+/* АГРЕССИВНОЕ изменение цвета кнопки на синий - все возможные селекторы */
+
+/* Основные селекторы с максимальной специфичностью */
+html body .gc-main-content form#ltForm9476674 button#button649715[type="submit"].btn.f-btn.button-md.btn-success,
+html body .gc-main-content form#ltForm9476674 button#button649715,
+html body form#ltForm9476674 button#button649715,
+form#ltForm9476674 button#button649715,
+#ltForm9476674 #button649715,
+#button649715.btn.f-btn.btn-success,
+#button649715.btn.f-btn,
+#button649715.btn,
 button#button649715,
-.btn#button649715,
+#button649715,
+button.btn.f-btn.btn-success[type="submit"],
+button.btn.f-btn.btn-success,
 button.btn.f-btn,
 button.btn.btn-success,
+button[type="submit"].btn,
 button[type="submit"],
+.btn.f-btn.btn-success,
+.btn.f-btn,
+.btn.btn-success,
+button.btn,
 button,
-.submit-btn,
-input[type="submit"],
-input[type="button"] {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+.btn {
+    background: #007bff !important;
     background-color: #007bff !important;
-    border: none !important;
+    background-image: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    border: 2px solid #007bff !important;
+    border-color: #007bff !important;
     color: white !important;
     padding: 18px 32px !important;
     font-size: 18px !important;
@@ -22,18 +38,46 @@ input[type="button"] {
     box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3) !important;
 }
 
-#button649715:hover,
+/* Hover эффекты с той же специфичностью */
+html body .gc-main-content form#ltForm9476674 button#button649715[type="submit"].btn.f-btn.button-md.btn-success:hover,
+html body .gc-main-content form#ltForm9476674 button#button649715:hover,
+html body form#ltForm9476674 button#button649715:hover,
+form#ltForm9476674 button#button649715:hover,
+#ltForm9476674 #button649715:hover,
+#button649715.btn.f-btn.btn-success:hover,
+#button649715.btn.f-btn:hover,
+#button649715.btn:hover,
 button#button649715:hover,
-.btn#button649715:hover,
+#button649715:hover,
+button.btn.f-btn.btn-success[type="submit"]:hover,
+button.btn.f-btn.btn-success:hover,
 button.btn.f-btn:hover,
 button.btn.btn-success:hover,
+button[type="submit"].btn:hover,
 button[type="submit"]:hover,
+.btn.f-btn.btn-success:hover,
+.btn.f-btn:hover,
+.btn.btn-success:hover,
+button.btn:hover,
 button:hover,
-.submit-btn:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover {
-    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%) !important;
+.btn:hover {
+    background: #0056b3 !important;
     background-color: #0056b3 !important;
+    background-image: linear-gradient(135deg, #0056b3 0%, #003d82 100%) !important;
+    border-color: #0056b3 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 12px 32px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Дополнительные стили для переопределения любых других стилей */
+[style*="background-color: #a50212"] {
+    background: #007bff !important;
+    background-color: #007bff !important;
+}
+
+/* Стили для активного состояния */
+button:active, .btn:active, #button649715:active {
+    background: #004085 !important;
+    background-color: #004085 !important;
+    transform: translateY(0) !important;
 }
