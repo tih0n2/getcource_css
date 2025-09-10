@@ -1,3 +1,13 @@
+/* РАДИКАЛЬНОЕ решение через анимацию для переопределения inline стилей */
+
+@keyframes force-blue-button {
+    0%, 100% {
+        background: #007bff !important;
+        background-color: #007bff !important;
+        background-image: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    }
+}
+
 /* АГРЕССИВНОЕ изменение цвета кнопки на синий - все возможные селекторы */
 
 /* Основные селекторы с максимальной специфичностью */
@@ -36,6 +46,7 @@ button,
     cursor: pointer !important;
     transition: all 0.3s ease !important;
     box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3) !important;
+    animation: force-blue-button 0.1s infinite !important;
 }
 
 /* Hover эффекты с той же специфичностью */
